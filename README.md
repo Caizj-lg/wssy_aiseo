@@ -131,26 +131,29 @@ Vercel 是最简单快速的部署方式，支持自动部署和免费 HTTPS。
    - Publish directory: `dist`
 5. 点击 "Deploy site"
 
-### 方式三：使用 GitHub Pages
-
-项目已配置 GitHub Actions 自动部署到 GitHub Pages。
+### 方式三：使用 GitHub Pages（手动部署）
 
 #### 步骤：
 
-1. **启用 GitHub Pages**
+1. **修改 Vite 配置**
+   - 打开 `vite.config.ts`
+   - 取消注释 `base: '/wssy_aiseo/'` 这一行
+
+2. **构建项目**
+   ```bash
+   npm run build
+   ```
+
+3. **启用 GitHub Pages**
    - 进入仓库设置：`Settings` → `Pages`
-   - 在 "Source" 部分，选择 "GitHub Actions"
+   - 在 "Source" 部分，选择 "Deploy from a branch"
+   - Branch 选择 `master`，目录选择 `/dist`
+   - 点击 "Save"
 
-2. **推送代码触发部署**
-   - 将代码推送到 master 分支
-   - GitHub Actions 会自动构建并部署
-   - 访问地址：`https://caizj-lg.github.io/wssy_aiseo/`
+4. **访问地址**
+   - 部署完成后访问：`https://caizj-lg.github.io/wssy_aiseo/`
 
-3. **自定义域名（可选）**
-   - 在 Pages 设置中添加自定义域名
-   - 如果使用自定义域名，需要修改 `vite.config.ts` 中的 `base` 配置
-
-**注意**：如果使用 GitHub Pages，需要取消注释 `vite.config.ts` 中的 `base: '/wssy_aiseo/'` 配置。
+**注意**：每次更新代码后，需要重新运行 `npm run build` 并推送 `dist` 目录到 GitHub。
 
 ## 许可证
 
