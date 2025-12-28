@@ -39,7 +39,7 @@ export function RankingSection() {
           }`}
         >
           <MessageSquare className="w-4 h-4" />
-          营销榜单
+          营销榜单（样例）
           {activeTab === 'marketing' && (
             <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600" />
           )}
@@ -53,7 +53,7 @@ export function RankingSection() {
           }`}
         >
           <Award className="w-4 h-4" />
-          品牌榜单
+          品牌榜单（样例）
           {activeTab === 'brand' && (
             <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600" />
           )}

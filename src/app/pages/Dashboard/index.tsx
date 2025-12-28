@@ -16,8 +16,8 @@ export default function Dashboard() {
           <div className="w-full h-full border-4 border-cyan-300 rounded-full" />
         </div>
 
-        <p className="text-blue-200 text-sm mb-2">回答即营销・A 企赢基</p>
-        <h1 className="font-bold mb-4">Deepseek 关键词优化</h1>
+        <p className="text-blue-200 text-sm mb-2">AI 问答营销优化平台</p>
+        <h1 className="font-bold mb-4">AI平台关键词优化</h1>
         <div className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm">
           AI 日均人群使用量已突破 8 亿 +
         </div>

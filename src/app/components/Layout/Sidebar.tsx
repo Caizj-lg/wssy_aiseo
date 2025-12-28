@@ -39,7 +39,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Logo */}
           <div className="flex items-center justify-between p-6 border-b border-blue-700">
             <div>
-              <h2 className="font-bold">GEO 系统</h2>
+              <h2 className="font-bold">万事胜意的GEO系统</h2>
               <p className="text-xs text-blue-300">AI营销管理平台</p>
             </div>
             <button
