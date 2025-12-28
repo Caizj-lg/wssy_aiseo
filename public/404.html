@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GEO AI Marketing Dashboard</title>
+    <script>
+      // GitHub Pages 404 处理 - 重定向到 index.html 让 React Router 处理路由
+      // 适配 base: '/wssy_aiseo/' 路径
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      var basePath = '/wssy_aiseo';
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        basePath + '/?/' +
+        l.pathname.slice(basePath.length + 1).replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+

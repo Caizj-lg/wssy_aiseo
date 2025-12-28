@@ -131,29 +131,38 @@ Vercel 是最简单快速的部署方式，支持自动部署和免费 HTTPS。
    - Publish directory: `dist`
 5. 点击 "Deploy site"
 
-### 方式三：使用 GitHub Pages（手动部署）
+### 方式三：使用 GitHub Pages（自动部署）⭐ 已配置
 
-#### 步骤：
+项目已配置 GitHub Actions 自动部署，每次推送到 master 分支会自动构建并部署。
 
-1. **修改 Vite 配置**
-   - 打开 `vite.config.ts`
-   - 取消注释 `base: '/wssy_aiseo/'` 这一行
+#### 首次部署步骤：
 
-2. **构建项目**
-   ```bash
-   npm run build
-   ```
+1. **启用 GitHub Pages**
+   - 进入仓库：https://github.com/Caizj-lg/wssy_aiseo
+   - 点击 `Settings` → `Pages`
+   - 在 "Source" 部分，选择 **"GitHub Actions"**
+   - 保存设置
 
-3. **启用 GitHub Pages**
-   - 进入仓库设置：`Settings` → `Pages`
-   - 在 "Source" 部分，选择 "Deploy from a branch"
-   - Branch 选择 `master`，目录选择 `/dist`
-   - 点击 "Save"
+2. **触发首次部署**
+   - 推送代码到 master 分支（或手动触发工作流）
+   - 进入 `Actions` 标签页查看部署进度
+   - 等待部署完成（通常 2-3 分钟）
 
-4. **访问地址**
+3. **访问地址**
    - 部署完成后访问：`https://caizj-lg.github.io/wssy_aiseo/`
 
-**注意**：每次更新代码后，需要重新运行 `npm run build` 并推送 `dist` 目录到 GitHub。
+#### 自动部署
+
+- ✅ 每次推送到 `master` 分支会自动触发部署
+- ✅ 无需手动构建，GitHub Actions 会自动处理
+- ✅ 支持 SPA 路由，已配置 404.html 处理
+
+#### 手动触发部署
+
+如果需要手动触发部署：
+- 进入 `Actions` 标签页
+- 选择 "Deploy to GitHub Pages" 工作流
+- 点击 "Run workflow"
 
 ## 许可证
 
